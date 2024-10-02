@@ -1,0 +1,27 @@
+//Исправленный код
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 5;
+    int *pNum = &num; // Correctly assign the address of num to pNum
+
+    cout << "Number before: " << *pNum << endl;
+
+    *pNum = 10; // Change the value at the address pointed to by pNum
+    cout << "Number after: " << *pNum << endl;
+
+    float *floatPtr = new float; // Use a different name for the pointer
+    *floatPtr = 5.5;
+    cout << "Float value: " << *floatPtr << endl;
+
+    int arr[5] = {1, 2, 3, 4, 5};
+    for (int i = 0; i < 5; i++) { // Change condition to i < 5 to avoid out-of-bounds access
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    delete floatPtr; // Free allocated memory for floatPtr
+    return 0;
+}
