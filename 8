@@ -1,0 +1,29 @@
+//Исправленный код
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10;
+    int b = 20;
+    int *ptrA;
+    int *ptrB;
+    
+    ptrA = &a;
+    ptrB = &b;
+
+    cout << "Value of a: " << *ptrA << endl;
+    cout << "Value of b: " << *ptrB << endl;
+
+    *ptrA = *ptrB;
+    cout << "After assigning b to a: " << *ptrA << endl;
+
+    int c = 30; // Declare variable c
+    int *ptrC = &c; // Initialize ptrC
+    cout << "Value of c: " << *ptrC << endl;
+
+    // No need to delete ptrC as it points to a stack variable
+    cout << "End of program." << endl;
+
+    return 0;
+}
